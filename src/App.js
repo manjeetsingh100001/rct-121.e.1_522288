@@ -13,7 +13,7 @@ export default function App() {
        },[page])
  const fetchData=(page)=>{
               setLoading(true)
-      return fetch(`http://localhost:8080/candidates?_sort=salary&_order=asc&_page=${page}&_limit=5`)
+      return fetch(`https://json-server-mocker-masai.herokuapp.com/candidates?_sort=salary&_order=asc&_page=${page}&_limit=5`)
              .then((res)=>res.json())
              .then((res)=>setData(res))
 
